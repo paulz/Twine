@@ -21,10 +21,8 @@
 		4BB49C2D21877A3C0098AB7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB49C2B21877A3C0098AB7E /* LaunchScreen.storyboard */; };
 		4BB49C3821877A3C0098AB7E /* EmailClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB49C3721877A3C0098AB7E /* EmailClientTests.swift */; };
 		4BB49C4321877A3C0098AB7E /* EmailClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB49C4221877A3C0098AB7E /* EmailClientUITests.swift */; };
-		4E1718489CCC1FA63F01E86D /* Pods_EmailClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5488333CA23008DE4A363167 /* Pods_EmailClientUITests.framework */; };
 		9F1DF93BB36DEE676B64260B /* Pods_SwiftEmail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE3149D19F5C31832E22034 /* Pods_SwiftEmail.framework */; };
 		A3B05489281BCA54E3A236A9 /* Pods_UnitSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84870F64BB364421C7DD963C /* Pods_UnitSpecs.framework */; };
-		C4655BB2E9E6F2309F5BBA39 /* Pods_EmailClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C04152C4F1516E1AAF9DB74 /* Pods_EmailClientTests.framework */; };
 		EE54EE908E85A3BDD73BE89B /* Pods_AppSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8001159CE1012D4C77A6C9 /* Pods_AppSpecs.framework */; };
 /* End PBXBuildFile section */
 
@@ -154,7 +152,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4655BB2E9E6F2309F5BBA39 /* Pods_EmailClientTests.framework in Frameworks */,
 				EE54EE908E85A3BDD73BE89B /* Pods_AppSpecs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,7 +160,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E1718489CCC1FA63F01E86D /* Pods_EmailClientUITests.framework in Frameworks */,
 				1E6FCDF44AE085C404BC2A6A /* Pods_UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
