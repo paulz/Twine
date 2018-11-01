@@ -14,13 +14,13 @@
 		4B8015A121877D0C005758E5 /* SwiftEmail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80158C21877D0B005758E5 /* SwiftEmail.framework */; };
 		4B8015A221877D0C005758E5 /* SwiftEmail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80158C21877D0B005758E5 /* SwiftEmail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BA2F886218B9C6E00D78ECB /* FirstSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2F885218B9C6E00D78ECB /* FirstSpec.swift */; };
+		4BA2F887218B9D2E00D78ECB /* FirstSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2F885218B9C6E00D78ECB /* FirstSpec.swift */; };
 		4BB49C2321877A3B0098AB7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB49C2221877A3B0098AB7E /* AppDelegate.swift */; };
 		4BB49C2521877A3B0098AB7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB49C2421877A3B0098AB7E /* ViewController.swift */; };
 		4BB49C2821877A3B0098AB7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB49C2621877A3B0098AB7E /* Main.storyboard */; };
 		4BB49C2A21877A3C0098AB7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB49C2921877A3C0098AB7E /* Assets.xcassets */; };
 		4BB49C2D21877A3C0098AB7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB49C2B21877A3C0098AB7E /* LaunchScreen.storyboard */; };
-		4BB49C3821877A3C0098AB7E /* EmailClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB49C3721877A3C0098AB7E /* EmailClientTests.swift */; };
-		4BB49C4321877A3C0098AB7E /* EmailClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB49C4221877A3C0098AB7E /* EmailClientUITests.swift */; };
+		4BB49C4321877A3C0098AB7E /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB49C4221877A3C0098AB7E /* UITests.swift */; };
 		9F1DF93BB36DEE676B64260B /* Pods_SwiftEmail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE3149D19F5C31832E22034 /* Pods_SwiftEmail.framework */; };
 		A3B05489281BCA54E3A236A9 /* Pods_UnitSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84870F64BB364421C7DD963C /* Pods_UnitSpecs.framework */; };
 		EE54EE908E85A3BDD73BE89B /* Pods_AppSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8001159CE1012D4C77A6C9 /* Pods_AppSpecs.framework */; };
@@ -96,11 +96,8 @@
 		4BB49C2C21877A3C0098AB7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB49C2E21877A3C0098AB7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BB49C3321877A3C0098AB7E /* AppSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BB49C3721877A3C0098AB7E /* EmailClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailClientTests.swift; sourceTree = "<group>"; };
-		4BB49C3921877A3C0098AB7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BB49C3E21877A3C0098AB7E /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BB49C4221877A3C0098AB7E /* EmailClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailClientUITests.swift; sourceTree = "<group>"; };
-		4BB49C4421877A3C0098AB7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BB49C4221877A3C0098AB7E /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		5488333CA23008DE4A363167 /* Pods_EmailClientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmailClientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C20949A0A3942C710CED2A3 /* Pods-UnitSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitSpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitSpecs/Pods-UnitSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		5F941DF91A6F3411B3288B22 /* Pods-EmailClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailClientTests/Pods-EmailClientTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,8 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				4BB49C2121877A3B0098AB7E /* EmailClient */,
-				4BB49C3621877A3C0098AB7E /* EmailClientTests */,
-				4BB49C4121877A3C0098AB7E /* EmailClientUITests */,
+				4BB49C3621877A3C0098AB7E /* AppSpecs */,
+				4BB49C4121877A3C0098AB7E /* UITests */,
 				4B80158D21877D0C005758E5 /* SwiftEmail */,
 				4B80159A21877D0C005758E5 /* SwiftEmailSpecs */,
 				4BB49C2021877A3B0098AB7E /* Products */,
@@ -243,22 +240,19 @@
 			path = EmailClient;
 			sourceTree = "<group>";
 		};
-		4BB49C3621877A3C0098AB7E /* EmailClientTests */ = {
+		4BB49C3621877A3C0098AB7E /* AppSpecs */ = {
 			isa = PBXGroup;
 			children = (
-				4BB49C3721877A3C0098AB7E /* EmailClientTests.swift */,
-				4BB49C3921877A3C0098AB7E /* Info.plist */,
 			);
-			path = EmailClientTests;
+			path = AppSpecs;
 			sourceTree = "<group>";
 		};
-		4BB49C4121877A3C0098AB7E /* EmailClientUITests */ = {
+		4BB49C4121877A3C0098AB7E /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				4BB49C4221877A3C0098AB7E /* EmailClientUITests.swift */,
-				4BB49C4421877A3C0098AB7E /* Info.plist */,
+				4BB49C4221877A3C0098AB7E /* UITests.swift */,
 			);
-			path = EmailClientUITests;
+			path = UITests;
 			sourceTree = "<group>";
 		};
 		B588A9A40B54E12670DE264D /* Frameworks */ = {
@@ -696,7 +690,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BB49C3821877A3C0098AB7E /* EmailClientTests.swift in Sources */,
+				4BA2F887218B9D2E00D78ECB /* FirstSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,7 +698,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BB49C4321877A3C0098AB7E /* EmailClientUITests.swift in Sources */,
+				4BB49C4321877A3C0098AB7E /* UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
