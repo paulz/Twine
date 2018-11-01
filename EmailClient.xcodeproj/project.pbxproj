@@ -10,10 +10,10 @@
 		1E6FCDF44AE085C404BC2A6A /* Pods_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6332BBD3A0668D4CE45A88D /* Pods_UITests.framework */; };
 		37B7DBC50F2B25D036F3AAE0 /* Pods_EmailClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE100B9437A31760EE0E9FFE /* Pods_EmailClient.framework */; };
 		4B80159521877D0C005758E5 /* SwiftEmail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80158C21877D0B005758E5 /* SwiftEmail.framework */; };
-		4B80159C21877D0C005758E5 /* SwiftEmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80159B21877D0C005758E5 /* SwiftEmailTests.swift */; };
 		4B80159E21877D0C005758E5 /* SwiftEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B80158E21877D0C005758E5 /* SwiftEmail.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B8015A121877D0C005758E5 /* SwiftEmail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80158C21877D0B005758E5 /* SwiftEmail.framework */; };
 		4B8015A221877D0C005758E5 /* SwiftEmail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80158C21877D0B005758E5 /* SwiftEmail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4BA2F886218B9C6E00D78ECB /* FirstSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2F885218B9C6E00D78ECB /* FirstSpec.swift */; };
 		4BB49C2321877A3B0098AB7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB49C2221877A3B0098AB7E /* AppDelegate.swift */; };
 		4BB49C2521877A3B0098AB7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB49C2421877A3B0098AB7E /* ViewController.swift */; };
 		4BB49C2821877A3B0098AB7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB49C2621877A3B0098AB7E /* Main.storyboard */; };
@@ -87,8 +87,7 @@
 		4B80158E21877D0C005758E5 /* SwiftEmail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftEmail.h; sourceTree = "<group>"; };
 		4B80158F21877D0C005758E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B80159421877D0C005758E5 /* UnitSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B80159B21877D0C005758E5 /* SwiftEmailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEmailTests.swift; sourceTree = "<group>"; };
-		4B80159D21877D0C005758E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BA2F885218B9C6E00D78ECB /* FirstSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSpec.swift; sourceTree = "<group>"; };
 		4BB49C1F21877A3B0098AB7E /* EmailClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB49C2221877A3B0098AB7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB49C2421877A3B0098AB7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -197,13 +196,12 @@
 			path = SwiftEmail;
 			sourceTree = "<group>";
 		};
-		4B80159A21877D0C005758E5 /* SwiftEmailTests */ = {
+		4B80159A21877D0C005758E5 /* SwiftEmailSpecs */ = {
 			isa = PBXGroup;
 			children = (
-				4B80159B21877D0C005758E5 /* SwiftEmailTests.swift */,
-				4B80159D21877D0C005758E5 /* Info.plist */,
+				4BA2F885218B9C6E00D78ECB /* FirstSpec.swift */,
 			);
-			path = SwiftEmailTests;
+			path = SwiftEmailSpecs;
 			sourceTree = "<group>";
 		};
 		4BB49C1621877A3B0098AB7E = {
@@ -213,7 +211,7 @@
 				4BB49C3621877A3C0098AB7E /* EmailClientTests */,
 				4BB49C4121877A3C0098AB7E /* EmailClientUITests */,
 				4B80158D21877D0C005758E5 /* SwiftEmail */,
-				4B80159A21877D0C005758E5 /* SwiftEmailTests */,
+				4B80159A21877D0C005758E5 /* SwiftEmailSpecs */,
 				4BB49C2021877A3B0098AB7E /* Products */,
 				23BCB76E29F628E208507C3F /* Pods */,
 				B588A9A40B54E12670DE264D /* Frameworks */,
@@ -681,7 +679,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B80159C21877D0C005758E5 /* SwiftEmailTests.swift in Sources */,
+				4BA2F886218B9C6E00D78ECB /* FirstSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,7 +822,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35KC7LV9BL;
-				INFOPLIST_FILE = SwiftEmailTests/Info.plist;
+				INFOPLIST_FILE = TestBundleInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -844,7 +842,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35KC7LV9BL;
-				INFOPLIST_FILE = SwiftEmailTests/Info.plist;
+				INFOPLIST_FILE = TestBundleInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1019,7 +1017,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35KC7LV9BL;
-				INFOPLIST_FILE = EmailClientTests/Info.plist;
+				INFOPLIST_FILE = TestBundleInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1040,7 +1038,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35KC7LV9BL;
-				INFOPLIST_FILE = EmailClientTests/Info.plist;
+				INFOPLIST_FILE = TestBundleInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1060,7 +1058,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35KC7LV9BL;
-				INFOPLIST_FILE = EmailClientUITests/Info.plist;
+				INFOPLIST_FILE = TestBundleInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1080,7 +1078,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35KC7LV9BL;
-				INFOPLIST_FILE = EmailClientUITests/Info.plist;
+				INFOPLIST_FILE = TestBundleInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
