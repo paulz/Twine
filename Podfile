@@ -16,6 +16,7 @@ end
 
 target 'EmailClient' do
   use_frameworks!
+  pod 'SwinjectStoryboard'
 
   target 'AppSpecs' do
     inherit! :search_paths
