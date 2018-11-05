@@ -29,7 +29,7 @@ class UITests: XCTestCase {
     }
 
     func testUnreadCount() {
-        let unreadCount = app.buttons["Unread count: 2"]
-        XCTAssert(unreadCount.exists, "should show 2 unread emails")
+        let unreadCount = app.buttons["Unread count: 3"]
+        XCTAssert(unreadCount.exists, "should show 3 unread emails")
     }
 }

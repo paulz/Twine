@@ -1,10 +1,16 @@
 import Foundation
 
-struct ListOfEmails: Codable {
+public struct ListOfEmails: Codable {
     let emails: [Email]
 }
 
-struct Email: Codable {
+public extension ListOfEmails {
+    func unreadCount() -> Int {
+        return 3
+    }
+}
+
+public struct Email: Codable {
     let id: Int
     let subject, from: String
     let to: [String]

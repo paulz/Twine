@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import SwiftEmail
 
 enum Sections: String {
     case Unread, Read
 }
 
 class SummaryViewController: UITableViewController {
+    var emails: ListOfEmails!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUnreadCounter(emails.unreadCount())
+    }
+
     let tableSections: [Sections] = [.Unread, .Read]
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,5 +38,11 @@ class SummaryViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+}
+
+extension SummaryViewController {
+    func updateUnreadCounter(_ count: Int) {
+        toolbarItems![0].title = "Unread count: \(count)"
     }
 }

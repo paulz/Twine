@@ -8,10 +8,7 @@ class EmailSpec: QuickSpec {
             context("json parsing") {
                 it("should create emails from json") {
                     let testBundle = Bundle.init(for: type(of: self))
-                    let jsonUrl = testBundle.url(forResource: "twine-mail-get", withExtension: "json")!
-                    let jsonData = try! Data(contentsOf: jsonUrl)
-                    let decoder = JSONDecoder()
-                    let list = try! decoder.decode(ListOfEmails.self, from: jsonData)
+                    let list = loadEmails(from: testBundle)
                     expect(list.emails.count) == 6
 
                     let firstEmail = list.emails[0]

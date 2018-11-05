@@ -24,6 +24,8 @@
 		4BB49C2D21877A3C0098AB7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB49C2B21877A3C0098AB7E /* LaunchScreen.storyboard */; };
 		4BB49C4321877A3C0098AB7E /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB49C4221877A3C0098AB7E /* UITests.swift */; };
 		4BFA77272190C84B00821AF0 /* FirstSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA77262190C84B00821AF0 /* FirstSpec.swift */; };
+		4BFA77292190C96C00821AF0 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA77282190C96C00821AF0 /* DependencyInjection.swift */; };
+		4BFA772B2190CCA800821AF0 /* LoadEmails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA772A2190CCA800821AF0 /* LoadEmails.swift */; };
 		9F1DF93BB36DEE676B64260B /* Pods_SwiftEmail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE3149D19F5C31832E22034 /* Pods_SwiftEmail.framework */; };
 		A3B05489281BCA54E3A236A9 /* Pods_UnitSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84870F64BB364421C7DD963C /* Pods_UnitSpecs.framework */; };
 		EE54EE908E85A3BDD73BE89B /* Pods_AppSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8001159CE1012D4C77A6C9 /* Pods_AppSpecs.framework */; };
@@ -104,6 +106,8 @@
 		4BB49C3E21877A3C0098AB7E /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB49C4221877A3C0098AB7E /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		4BFA77262190C84B00821AF0 /* FirstSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSpec.swift; sourceTree = "<group>"; };
+		4BFA77282190C96C00821AF0 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		4BFA772A2190CCA800821AF0 /* LoadEmails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadEmails.swift; sourceTree = "<group>"; };
 		5488333CA23008DE4A363167 /* Pods_EmailClientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmailClientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C20949A0A3942C710CED2A3 /* Pods-UnitSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitSpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitSpecs/Pods-UnitSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		5F941DF91A6F3411B3288B22 /* Pods-EmailClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailClientTests/Pods-EmailClientTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				4B80158E21877D0C005758E5 /* SwiftEmail.h */,
 				4B80158F21877D0C005758E5 /* Info.plist */,
 				4BA2F88B218BC42300D78ECB /* Email.swift */,
+				4BFA772A2190CCA800821AF0 /* LoadEmails.swift */,
 			);
 			path = SwiftEmail;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				4BB49C2221877A3B0098AB7E /* AppDelegate.swift */,
+				4BFA77282190C96C00821AF0 /* DependencyInjection.swift */,
 				4BB49C2421877A3B0098AB7E /* SummaryViewController.swift */,
 				4BB49C2621877A3B0098AB7E /* Main.storyboard */,
 				4BB49C2921877A3C0098AB7E /* Assets.xcassets */,
@@ -501,6 +507,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EmailClient/Pods-EmailClient-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -508,6 +515,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,6 +712,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BFA772B2190CCA800821AF0 /* LoadEmails.swift in Sources */,
 				4BA2F88C218BC42300D78ECB /* Email.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,6 +731,7 @@
 			files = (
 				4BB49C2521877A3B0098AB7E /* SummaryViewController.swift in Sources */,
 				4BB49C2321877A3B0098AB7E /* AppDelegate.swift in Sources */,
+				4BFA77292190C96C00821AF0 /* DependencyInjection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
