@@ -33,16 +33,34 @@ class SummaryViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        switch tableSections[section] {
+        case .Read:
+            return emails.readEmails().count
+        case .Unread:
+            return 1
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let section = tableSections[indexPath.section]
+        let cellType = "\(section.rawValue) Emails Cell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellType)!
+        if section == .Read {
+            cell.configure(email: emails.readEmails()[indexPath.row])
+        }
+        return cell
     }
 }
 
 extension SummaryViewController {
     func updateUnreadCounter(_ count: Int) {
         toolbarItems![0].title = "Unread count: \(count)"
+    }
+}
+
+extension UITableViewCell {
+    func configure(email: Email) {
+        let subjectLabel = viewWithTag(1) as! UILabel
+        subjectLabel.text = email.subject
     }
 }

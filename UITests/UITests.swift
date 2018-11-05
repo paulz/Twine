@@ -32,4 +32,9 @@ class UITests: XCTestCase {
         let unreadCount = app.buttons["Unread count: 3"]
         XCTAssert(unreadCount.exists, "should show 3 unread emails")
     }
+
+    func testReadEmailSubject() {
+        let firstReadEmailSubject = app.staticTexts["Next steps"]
+        XCTAssert(firstReadEmailSubject.exists, "should read email with subject Next steps")
+    }
 }
