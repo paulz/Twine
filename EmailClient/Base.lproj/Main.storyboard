@@ -25,42 +25,52 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Read Emails Cell" rowHeight="101" id="e3L-BT-WH6">
-                                <rect key="frame" x="0.0" y="99.5" width="375" height="101"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Read Emails Cell" rowHeight="120" id="e3L-BT-WH6">
+                                <rect key="frame" x="0.0" y="99.5" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e3L-BT-WH6" id="6K7-O3-8uZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEV-Hu-1fM">
-                                            <rect key="frame" x="66" y="11" width="59" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEV-Hu-1fM">
+                                            <rect key="frame" x="16" y="11" width="61.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOE-ur-5V9">
+                                            <rect key="frame" x="16" y="36" width="36" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="from" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOE-ur-5V9">
-                                            <rect key="frame" x="66" y="39" width="36" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7g-IF-ceE">
+                                            <rect key="frame" x="330.5" y="52" width="28.5" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDz-Kx-Pcx">
-                                            <rect key="frame" x="66" y="61" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preview body of the email in two lines" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDz-Kx-Pcx">
+                                            <rect key="frame" x="16" y="68" width="197" height="41"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7g-IF-ceE">
-                                            <rect key="frame" x="308" y="39" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="b7g-IF-ceE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GOE-ur-5V9" secondAttribute="trailing" constant="8" symbolic="YES" id="6nq-hB-Ldg"/>
+                                        <constraint firstItem="GOE-ur-5V9" firstAttribute="leading" secondItem="6K7-O3-8uZ" secondAttribute="leadingMargin" id="BiJ-Uw-DpO"/>
+                                        <constraint firstItem="lDz-Kx-Pcx" firstAttribute="bottom" secondItem="6K7-O3-8uZ" secondAttribute="bottomMargin" id="IbY-ME-pVH"/>
+                                        <constraint firstItem="GOE-ur-5V9" firstAttribute="top" secondItem="dEV-Hu-1fM" secondAttribute="bottom" constant="4.5" id="LSu-br-80o"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dEV-Hu-1fM" secondAttribute="trailing" constant="100" id="NYq-Pw-arf"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lDz-Kx-Pcx" secondAttribute="trailing" constant="20" symbolic="YES" id="RJZ-JM-b1G"/>
+                                        <constraint firstItem="lDz-Kx-Pcx" firstAttribute="leading" secondItem="6K7-O3-8uZ" secondAttribute="leadingMargin" id="Tay-Zm-bh4"/>
+                                        <constraint firstItem="b7g-IF-ceE" firstAttribute="trailing" secondItem="6K7-O3-8uZ" secondAttribute="trailingMargin" id="aIi-bt-KFW"/>
+                                        <constraint firstItem="dEV-Hu-1fM" firstAttribute="top" secondItem="6K7-O3-8uZ" secondAttribute="topMargin" id="bMk-WA-Jn1"/>
+                                        <constraint firstItem="b7g-IF-ceE" firstAttribute="centerY" secondItem="6K7-O3-8uZ" secondAttribute="centerY" id="fVL-Ba-Gik"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GOE-ur-5V9" secondAttribute="trailing" constant="100" id="tRW-bX-enB"/>
+                                        <constraint firstItem="dEV-Hu-1fM" firstAttribute="leading" secondItem="6K7-O3-8uZ" secondAttribute="leadingMargin" id="vLm-Kt-Jjp"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

@@ -41,6 +41,15 @@ class SummaryViewController: UITableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch tableSections[indexPath.section] {
+        case .Read:
+            return 110
+        case .Unread:
+            return 150
+        }
+    }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = tableSections[indexPath.section]
         let cellType = "\(section.rawValue) Emails Cell"
@@ -60,7 +69,9 @@ extension SummaryViewController {
 
 extension UITableViewCell {
     func configure(email: Email) {
-        let subjectLabel = viewWithTag(1) as! UILabel
-        subjectLabel.text = email.subject
+        (viewWithTag(1) as! UILabel).text = email.subject
+        (viewWithTag(2) as! UILabel).text = email.to.joined(separator: ", ")
+        (viewWithTag(3) as! UILabel).text = email.date
+        (viewWithTag(4) as! UILabel).text = email.body
     }
 }
