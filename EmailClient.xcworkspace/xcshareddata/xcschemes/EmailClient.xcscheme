@@ -37,6 +37,13 @@
             BlueprintName = "EmailClient"
             ReferencedContainer = "container:EmailClient.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4B80158B21877D0B005758E5"
+            BuildableName = "SwiftEmail.framework"
+            BlueprintName = "SwiftEmail"
+            ReferencedContainer = "container:EmailClient.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
@@ -56,6 +63,16 @@
                BlueprintIdentifier = "4BB49C3D21877A3C0098AB7E"
                BuildableName = "UITests.xctest"
                BlueprintName = "UITests"
+               ReferencedContainer = "container:EmailClient.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4B80159321877D0C005758E5"
+               BuildableName = "UnitSpecs.xctest"
+               BlueprintName = "UnitSpecs"
                ReferencedContainer = "container:EmailClient.xcodeproj">
             </BuildableReference>
          </TestableReference>
