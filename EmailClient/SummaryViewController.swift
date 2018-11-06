@@ -69,9 +69,11 @@ extension SummaryViewController {
 
 extension UITableViewCell {
     func configure(email: Email) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
         (viewWithTag(1) as! UILabel).text = email.subject
         (viewWithTag(2) as! UILabel).text = email.to.joined(separator: ", ")
-        (viewWithTag(3) as! UILabel).text = email.date
+        (viewWithTag(3) as! UILabel).text = email.date == nil ? "" : dateFormatter.string(from: email.date!) 
         (viewWithTag(4) as! UILabel).text = email.body
     }
 }

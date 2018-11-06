@@ -33,9 +33,10 @@ class UITests: XCTestCase {
         XCTAssert(unreadCount.exists, "should show 3 unread emails")
     }
 
-    func testReadEmailSubjectAndBody() {
+    func testReadEmailSubjectBodyAndDate() {
         let firstReadEmailSubject = app.staticTexts["Next steps"]
         XCTAssert(firstReadEmailSubject.exists, "should read email with subject Next steps")
         XCTAssert(app.staticTexts["Ornare integer tincidunt quis ut nam, lobortis dignissim, montes eros"].exists)
+        XCTAssert(app.staticTexts["Aug 1, 2017"].exists)
     }
 }
