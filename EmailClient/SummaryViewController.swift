@@ -69,11 +69,13 @@ extension SummaryViewController {
 
 extension SummaryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return emails.readEmails().count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "Unread Email Cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Unread Email Cell", for: indexPath)
+        cell.contentView.configure(email: emails.unreadEmails()[indexPath.row])
+        return cell
     }
 }
 

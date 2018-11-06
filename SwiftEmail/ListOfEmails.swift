@@ -12,4 +12,9 @@ public extension ListOfEmails {
     func readEmails() -> [Email] {
         return emails
     }
+
+    func unreadEmails() -> [Email] {
+        return emails
+    }
+
 }
