@@ -15,11 +15,13 @@ enum Sections: String {
 
 extension UIView {
     func superviewOfType<T>() -> T {
+        var view: T!
         if let parent = superview as? T {
-            return parent
+            view = parent
         } else {
-            return superview!.superviewOfType()
+            view = superview!.superviewOfType()
         }
+        return view
     }
 }
 
