@@ -13,12 +13,33 @@ enum Sections: String {
     case Unread, Read
 }
 
+extension UIView {
+    func superviewOfType<T>() -> T {
+        if let parent = superview as? T {
+            return parent
+        } else {
+            return superview!.superviewOfType()
+        }
+    }
+}
+
 class SummaryViewController: UITableViewController {
     var emails: ListOfEmails!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUnreadCounter(emails.unreadCount())
+    }
+
+    @IBAction func markAsRead(_ sender: UIButton) {
+        let cell: UICollectionViewCell = sender.superviewOfType()
+        let collectionView: UICollectionView = cell.superviewOfType()
+        let indexPath = collectionView.indexPath(for: cell)!
+        let index = indexPath.row
+        emails.markRead(index)
+        collectionView.reloadData()
+        updateUnreadCounter(emails.unreadCount())
+        tableView.reloadData()
     }
 
     let tableSections: [Sections] = [.Unread, .Read]
@@ -70,7 +91,7 @@ extension SummaryViewController {
 
 extension SummaryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return emails.readEmails().count
+        return emails.unreadEmails().count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -28,11 +28,6 @@ class UITests: XCTestCase {
         XCTAssert(app.staticTexts["READ EMAILS"].exists, "there should be a section for unread emails")
     }
 
-    func testUnreadCount() {
-        let unreadCount = app.buttons["Unread count: 3"]
-        XCTAssert(unreadCount.exists, "should show 3 unread emails")
-    }
-
     func testReadEmailSubjectBodyAndDate() {
         let firstReadEmailSubject = app.staticTexts["Next steps"]
         XCTAssert(firstReadEmailSubject.exists, "should read email with subject Next steps")
@@ -40,8 +35,15 @@ class UITests: XCTestCase {
         XCTAssert(app.staticTexts["Aug 1, 2017"].exists)
     }
 
-    func testMarkAsRead() {
+    func testMarkAsReadShouldReduceUnreadCount() {
+        let unreadCountBefore = app.buttons["Unread count: 3"]
+        XCTAssert(unreadCountBefore.exists, "should show 3 unread emails")
+
         let markButton = app.buttons["Mark as Read"]
         XCTAssert(markButton.exists)
+        markButton.firstMatch.tap()
+
+        let unreadCountAfter = app.buttons["Unread count: 2"]
+        XCTAssert(unreadCountAfter.exists, "should show 2 unread emails")
     }
 }
