@@ -55,7 +55,8 @@ class SummaryViewController: UITableViewController {
         let cellType = "\(section.rawValue) Emails Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellType)!
         if section == .Read {
-            cell.contentView.configure(email: emails.readEmails()[indexPath.row])
+            let email = emails.readEmails()[indexPath.row]
+            email.display(in: cell.contentView)
         }
         return cell
     }
@@ -74,18 +75,8 @@ extension SummaryViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Unread Email Cell", for: indexPath)
-        cell.contentView.configure(email: emails.unreadEmails()[indexPath.row])
+        let email = emails.unreadEmails()[indexPath.row]
+        email.display(in: cell.contentView)
         return cell
-    }
-}
-
-extension UIView {
-    func configure(email: Email) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        (viewWithTag(1) as! UILabel).text = email.subject
-        (viewWithTag(2) as! UILabel).text = email.to.joined(separator: ", ")
-        (viewWithTag(3) as! UILabel).text = email.date == nil ? "" : dateFormatter.string(from: email.date!) 
-        (viewWithTag(4) as! UILabel).text = email.body
     }
 }
