@@ -1,12 +1,22 @@
 import Foundation
 
-public struct Email: Codable {
+public class Email: Codable {
     public let id: Int
     public let subject, from: String
     public let to: [String]
     public let body: String
     public let date: Date?
-    public let unread: Bool
+    public var unread: Bool
+
+    public init(id: Int, unread: Bool) {
+        self.id = id
+        self.unread = unread
+        subject = ""
+        to = []
+        from = ""
+        body = ""
+        date = nil
+    }
 
     static let displayDateFormatter: DateFormatter = {
         let formatter = DateFormatter()

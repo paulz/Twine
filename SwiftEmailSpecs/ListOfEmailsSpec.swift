@@ -5,8 +5,8 @@ import Nimble
 class ListOfEmailsSpec: QuickSpec {
     override func spec() {
         describe("ListOfEmails") {
-            let readEmail = Email(id: 1, subject: "read", from: "", to: [], body: "", date: nil, unread: false)
-            let unreadEmail = Email(id: 2, subject: "unread", from: "", to: [], body: "", date: nil, unread: true)
+            let readEmail = Email(id: 1, unread: false)
+            let unreadEmail = Email(id: 2, unread: true)
             let emails = ListOfEmails(emails: [readEmail, unreadEmail])
 
             context("readEmails") {
@@ -34,6 +34,14 @@ class ListOfEmailsSpec: QuickSpec {
                     it("should be 1") {
                         expect(emails.unreadCount()) == 1
                     }
+                }
+            }
+
+            context("mark read") {
+                it("should change from unread to read") {
+                    emails.markRead(0)
+                    expect(emails.unreadEmails().count) == 0
+                    expect(emails.readEmails().count) == 2
                 }
             }
         }

@@ -1,7 +1,11 @@
 import Foundation
 
-public struct ListOfEmails: Codable {
+public class ListOfEmails: Codable {
     let emails: [Email]
+
+    public init(emails: [Email]) {
+        self.emails = emails
+    }
 }
 
 public extension ListOfEmails {
@@ -17,4 +21,8 @@ public extension ListOfEmails {
         return emails.filter{$0.unread}
     }
 
+    func markRead(_ index: Int) {
+        var unread = unreadEmails()
+        unread[index].unread = false
+    }
 }
