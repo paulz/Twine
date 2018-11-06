@@ -18,5 +18,6 @@ extension SwinjectStoryboard {
         defaultContainer.storyboardInitCompleted(SummaryViewController.self) { r, c in
             c.emails = r~>
         }
+        defaultContainer.storyboardInitCompleted(UINavigationController.self) {_,_  in}
     }
 }
