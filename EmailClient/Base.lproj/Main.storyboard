@@ -16,17 +16,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Unread Emails Cell" id="6Eb-De-RYA">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Unread Emails Cell" rowHeight="215" id="6Eb-De-RYA">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="215"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Eb-De-RYA" id="yXN-Oj-UM5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="214.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2ge-tb-RlC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="214.5"/>
+                                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8CG-ku-cee">
+                                                <size key="itemSize" width="340" height="190"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Unread Email Cell" id="tIe-tv-i9g">
+                                                    <rect key="frame" x="10" y="12.5" width="340" height="190"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="340" height="190"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rG-Aq-gJt">
+                                                                <rect key="frame" x="0.0" y="150" width="340" height="39"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="39" id="kn6-rm-9xZ"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Mark as Read"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="7rG-Aq-gJt" secondAttribute="trailing" id="MqK-5V-65c"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7rG-Aq-gJt" secondAttribute="bottom" constant="1" id="YfN-Yh-GyZ"/>
+                                                        <constraint firstItem="7rG-Aq-gJt" firstAttribute="leading" secondItem="tIe-tv-i9g" secondAttribute="leading" id="opM-uj-4Kb"/>
+                                                    </constraints>
+                                                    <size key="customSize" width="340" height="190"/>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="m7Y-Te-Jkv" id="MYb-AP-2vv"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="2ge-tb-RlC" secondAttribute="bottom" id="Rf5-DV-1yq"/>
+                                        <constraint firstItem="2ge-tb-RlC" firstAttribute="leading" secondItem="yXN-Oj-UM5" secondAttribute="leading" id="cA8-c9-jRz"/>
+                                        <constraint firstItem="2ge-tb-RlC" firstAttribute="top" secondItem="yXN-Oj-UM5" secondAttribute="top" id="d8R-qM-h6x"/>
+                                        <constraint firstAttribute="trailing" secondItem="2ge-tb-RlC" secondAttribute="trailing" id="hCr-aU-KQd"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Read Emails Cell" rowHeight="120" id="e3L-BT-WH6">
-                                <rect key="frame" x="0.0" y="99.5" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="270.5" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e3L-BT-WH6" id="6K7-O3-8uZ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
@@ -72,6 +121,7 @@
                                         <constraint firstItem="dEV-Hu-1fM" firstAttribute="leading" secondItem="6K7-O3-8uZ" secondAttribute="leadingMargin" id="vLm-Kt-Jjp"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <sections/>

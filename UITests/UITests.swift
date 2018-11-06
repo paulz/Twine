@@ -39,4 +39,9 @@ class UITests: XCTestCase {
         XCTAssert(app.staticTexts["Ornare integer tincidunt quis ut nam, lobortis dignissim, montes eros"].exists)
         XCTAssert(app.staticTexts["Aug 1, 2017"].exists)
     }
+
+    func testMarkAsRead() {
+        let markButton = app.buttons["Mark as Read"]
+        XCTAssert(markButton.exists)
+    }
 }
