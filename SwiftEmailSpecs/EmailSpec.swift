@@ -16,7 +16,10 @@ class EmailSpec: QuickSpec {
                     expect(firstEmail.from) == "x@gmail.com"
                     expect(firstEmail.to) == ["a@gmail.com", "b@gmail.com", "c.gmail.com"]
                     expect(firstEmail.body) == "Mi augue mattis vitae erat risus nibh, mauris sodales nonummy a, vestibulum lacinia"
-                    expect(firstEmail.date) == "2017-08-01T14:30Z"
+                    let formatter = jsonDateFormatter()
+                    let expectedDate = formatter.date(from: "2017-08-01T14:30Z")
+
+                    expect(firstEmail.date) == expectedDate
                     expect(firstEmail.unread) == true
                 }
             }
