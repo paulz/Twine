@@ -10,11 +10,11 @@ public extension ListOfEmails {
     }
 
     func readEmails() -> [Email] {
-        return emails
+        return emails.filter{!$0.unread}
     }
 
     func unreadEmails() -> [Email] {
-        return emails
+        return emails.filter{$0.unread}
     }
 
 }
