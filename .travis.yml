@@ -7,6 +7,6 @@ cache:
   directories:
     - DerivedData
 language: swift
-osx_image: xcode10
+osx_image: xcode10.1
 xcode_scheme: EmailClient
 xcode_workspace: EmailClient.xcworkspace
