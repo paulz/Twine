@@ -1,4 +1,5 @@
 platform :ios, '12.0'
+inhibit_all_warnings!
 
 def bdd_pods
     pod 'Quick'
