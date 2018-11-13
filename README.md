@@ -7,8 +7,8 @@ Email client exercise with 100% test covered implementation.
 
 This project demonstrates
 * UI Tests - Test Driving user stories
-* Unit Specs - Test Driving code
+* Unit Specs - Test Driving code implementation and enabling refactoring
 * Swift Dynamic Framework - allows testability and separation of concerns
-* Dependency Injection - clean code
-* Swift 4 JSON parsing directly into models
+* Dependency Injection - enables clean code
+* Swift 4 JSON parsing directly into mutable models
 * Storyboards with reusable view models across multiple views
