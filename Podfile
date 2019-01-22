@@ -19,6 +19,7 @@ target 'EmailClient' do
   use_frameworks!
   pod 'SwinjectStoryboard'
   pod 'SwinjectAutoregistration'
+  pod 'Siesta/Alamofire'
 
   target 'AppSpecs' do
     inherit! :search_paths

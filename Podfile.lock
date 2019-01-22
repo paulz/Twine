@@ -1,6 +1,11 @@
 PODS:
+  - Alamofire (4.8.1)
   - Nimble (7.3.1)
   - Quick (1.3.2)
+  - Siesta/Alamofire (1.4.2):
+    - Alamofire (> 4.1)
+    - Siesta/Core
+  - Siesta/Core (1.4.2)
   - Swinject (2.5.0)
   - SwinjectAutoregistration (2.5.0):
     - Swinject (~> 2.5)
@@ -10,24 +15,29 @@ PODS:
 DEPENDENCIES:
   - Nimble
   - Quick
+  - Siesta/Alamofire
   - SwinjectAutoregistration
   - SwinjectStoryboard
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Nimble
     - Quick
+    - Siesta
     - Swinject
     - SwinjectAutoregistration
     - SwinjectStoryboard
 
 SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  Siesta: 337a9c39c9b78bba904286310c86562a886efdab
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
   SwinjectAutoregistration: 0502a16e5f5baf181be80dc9510e0efa29130485
   SwinjectStoryboard: 688f096033103e66ffcf6ca678211acd7d7be505
 
-PODFILE CHECKSUM: 3fe6a9bd88709aa4d4fc7f5cad6812ac107df8ae
+PODFILE CHECKSUM: 9ed183b3e2ccd7d16d7b1420bac0c2df32099308
 
 COCOAPODS: 1.5.3
